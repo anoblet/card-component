@@ -17,4 +17,9 @@ export default css`
     display: flex;
     flex: 1;
   }
+
+  ::slotted([slot="content"]) {
+    display: flex;
+    flex: 1;
+  }
 `;
