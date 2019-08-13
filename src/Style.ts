@@ -16,6 +16,7 @@ export default css`
   #body {
     display: flex;
     flex: 1;
+    flex-direction: column;
   }
 
   ::slotted([slot="content"]) {
