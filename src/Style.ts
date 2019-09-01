@@ -7,10 +7,10 @@ export default css`
   }
 
   #card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    display: grid;
+    grid-gap: 1rem;
     padding: 1rem;
+    flex: 1;
   }
 
   #body {
@@ -20,7 +20,10 @@ export default css`
   }
 
   ::slotted([slot="content"]) {
-    display: flex;
     flex: 1;
+  }
+
+  #header,#footer {
+    display: contents;
   }
 `;
