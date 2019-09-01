@@ -3,7 +3,7 @@ import { expand_less, expand_more } from "@anoblet/material-icons";
 
 export default function() {
   return html`
-    <div id="card">
+    <div id="card" part="card">
       <div id="header">
         <slot name="title"></slot>${this.collapsible
           ? html`
