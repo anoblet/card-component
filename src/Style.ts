@@ -7,8 +7,11 @@ export default css`
   }
 
   #card {
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
     grid-gap: 1rem;
+    grid-template-rows: auto;
     padding: 1rem;
     flex: 1;
   }
@@ -23,7 +26,8 @@ export default css`
     flex: 1;
   }
 
-  #header,#footer {
+  #header,
+  #footer {
     display: contents;
   }
 `;
