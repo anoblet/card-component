@@ -19,8 +19,7 @@ export class CardComponent extends LitElement {
   }
 
   protected addListeners() {
-    if (this.collapsible)
-      this.header.addEventListener("click", () => this.toggle());
+    if (this.collapsible) this.header.addEventListener("click", this.toggle);
   }
 
   public toggle() {
