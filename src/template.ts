@@ -15,8 +15,6 @@ export default function() {
       </div>
       <div id="body">
         <slot name="body"></slot>
-        <!-- backwards compatibility -->
-        <slot name="content"></slot>
         <slot></slot>
       </div>
       <div id="footer">
@@ -25,7 +23,3 @@ export default function() {
     </div>
   `;
 }
-
-/**
- * Index slot will be equal to slot="body"
- */

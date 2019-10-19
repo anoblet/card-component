@@ -8,8 +8,6 @@ export default css`
 
   #card {
     display: grid;
-    /* display: flex;
-    flex-direction: column; */
     grid-gap: 1rem;
     padding: 1rem;
     flex: 1;
@@ -19,10 +17,6 @@ export default css`
     display: flex;
     flex: 1;
     flex-direction: column;
-  }
-
-  ::slotted([slot="content"]) {
-    flex: 1;
   }
 
   #header,
