@@ -7,11 +7,10 @@ export default css`
   }
 
   #card {
-    /* display: grid; */
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* display: flex;
+    flex-direction: column; */
     grid-gap: 1rem;
-    grid-template-rows: auto;
     padding: 1rem;
     flex: 1;
   }
