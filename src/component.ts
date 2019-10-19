@@ -1,12 +1,12 @@
 import { LitElement, customElement, property, query } from "lit-element";
 
-import Style from "./Style";
-import Template from "./Template";
+import style from "./style";
+import template from "./template";
 
 @customElement("card-component")
 export class CardComponent extends LitElement {
-  public static styles = Style;
-  public render = Template.bind(this);
+  public static styles = style;
+  public render = template.bind(this);
 
   @property() collapsible;
   @property() collapsed;
