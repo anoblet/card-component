@@ -8,14 +8,18 @@ export default function() {
         <slot name="title"></slot>${this.collapsible
           ? html`
               <span id="icon"
-                >${this.collapsed ? expand_less : expand_more}</span
+                >${this.collapsed ? expand_more : expand_less}</span
               >
             `
           : ""}
       </div>
       <div id="body">
-        <slot name="body"></slot>
-        <slot></slot>
+        ${!this.collapsed
+          ? html`
+              <slot name="body"></slot>
+              <slot></slot>
+            `
+          : ""}
       </div>
       <div id="footer">
         <slot name="footer"></slot>

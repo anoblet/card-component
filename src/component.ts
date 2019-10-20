@@ -8,10 +8,10 @@ export class CardComponent extends LitElement {
   public static styles = style;
   public render = template.bind(this);
 
-  @property() collapsible: boolean = false;
-  @property() collapsed: boolean = false;
+  @property({ type: Boolean, reflect: true }) collapsible: boolean = false;
+  @property({ type: Boolean, reflect: true }) collapsed: boolean = false;
 
-  @query("#icon") public icon: Element;
+  @query("#icon") public toggleIcon: Element;
 
   public firstUpdated(changedProperties: any) {
     super.firstUpdated(changedProperties);
@@ -19,7 +19,8 @@ export class CardComponent extends LitElement {
   }
 
   protected addListeners() {
-    if (this.collapsible) this.icon.addEventListener("click", this.toggle);
+    if (this.collapsible)
+      this.toggleIcon.addEventListener("click", this.toggle.bind(this));
   }
 
   public toggle() {

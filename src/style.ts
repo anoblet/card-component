@@ -23,4 +23,8 @@ export default css`
   #footer {
     display: contents;
   }
+
+  svg {
+    fill: currentColor;
+  }
 `;
