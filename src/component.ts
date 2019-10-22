@@ -11,19 +11,7 @@ export class CardComponent extends LitElement {
   @property({ type: Boolean, reflect: true }) collapsible: boolean = false;
   @property({ type: Boolean, reflect: true }) collapsed: boolean = false;
 
-  @query("#icon") public toggleIcon: Element;
-
-  public firstUpdated(changedProperties: any) {
-    super.firstUpdated(changedProperties);
-    this.addListeners();
-  }
-
-  protected addListeners() {
-    if (this.collapsible)
-      this.toggleIcon.addEventListener("click", this.toggle.bind(this));
-  }
-
-  public toggle() {
+  public _handleToggle() {
     this.collapsed = !this.collapsed;
   }
 }

@@ -3,26 +3,18 @@ import { expand_less, expand_more } from "@anoblet/material-icons";
 
 export default function() {
   return html`
-    <div id="card" part="card">
-      <div id="header">
-        <slot name="title"></slot>${this.collapsible
-          ? html`
-              <span id="icon"
-                >${this.collapsed ? expand_more : expand_less}</span
-              >
-            `
-          : ""}
-      </div>
-      <div id="body">
-        ${!this.collapsed
-          ? html`
-              <slot name="body"></slot>
-              <slot></slot>
-            `
-          : ""}
-      </div>
-      <div id="footer">
-        <slot name="footer"></slot>
+    <div id="card">
+      <slot name="title"></slot>
+      ${this.collapsible
+        ? html`
+            <div id="toggle" @click=${this._handleToggle}>
+              ${this.collapsed ? expand_more : expand_less}
+            </div>
+          `
+        : ""}
+      <div id="body" ?hidden=${this.collapsed}>
+        <slot name="body"></slot>
+        <slot></slot>
       </div>
     </div>
   `;

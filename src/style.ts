@@ -1,30 +1,11 @@
 import { css } from "lit-element";
 
 export default css`
-  :host {
-    display: flex;
-    flex: 1;
-  }
-
   #card {
     display: grid;
-    grid-gap: 1rem;
-    padding: 1rem;
-    flex: 1;
-  }
-
-  #body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
-
-  #header,
-  #footer {
-    display: contents;
-  }
-
-  svg {
-    fill: currentColor;
+    grid-gap: 1em;
+    border: 1px solid #000;
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 `;
