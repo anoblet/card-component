@@ -8,8 +8,8 @@ export class CardComponent extends LitElement {
   public static styles = style;
   public render = template.bind(this);
 
-  @property({ type: Boolean, reflect: true }) collapsible: boolean = false;
-  @property({ type: Boolean, reflect: true }) collapsed: boolean = false;
+  @property({ type: Boolean}) collapsible: boolean = false;
+  @property({ type: Boolean}) collapsed: boolean = false;
 
   public _handleToggle() {
     this.collapsed = !this.collapsed;
