@@ -8,6 +8,10 @@ export default css`
     padding: 1rem;
   }
 
+  #header {
+    align-items: center;
+  }
+
   :host([collapsible]) #header {
     display: grid;
     grid-template-columns: auto max-content;
