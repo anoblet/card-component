@@ -4,12 +4,7 @@ export default css`
   #card {
     display: grid;
     grid-gap: 1em;
-    align-items: center;
     padding: 1rem;
-  }
-
-  #header {
-    align-items: center;
   }
 
   :host([collapsible]) #header {
@@ -28,11 +23,14 @@ export default css`
   #toggle {
     display: flex;
     justify-content: flex-end;
-    text-align: end;
   }
 
-  #body {
-    grid-column-start: 1;
-    grid-column-end: -1;
+  /*
+  Vertically align the title
+ */
+  ::slotted([slot="title"]) {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 `;
