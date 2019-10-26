@@ -1,8 +1,9 @@
 import { css } from "lit-element";
 
 export default css`
-  #card {
+  :host {
     display: grid;
+    grid-template-rows: max-content;
     grid-gap: 1em;
     padding: 1rem;
   }
@@ -32,5 +33,13 @@ export default css`
     display: flex;
     align-items: center;
     height: 100%;
+  }
+
+  #body {
+    display: flex;
+  }
+
+  [hidden] {
+    display: none !important;
   }
 `;

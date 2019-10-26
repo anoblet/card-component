@@ -1,4 +1,5 @@
 import typescript from "rollup-plugin-typescript";
+import resolve from "rollup-plugin-node-resolve";
 
 export default {
   input: "./src/component.ts",
@@ -6,5 +7,5 @@ export default {
     file: "dist/index.js",
     format: "esm"
   },
-  plugins: [typescript()]
+  plugins: [resolve({ dedupe: ["lit-element", "lit-html"] }), , typescript()]
 };
